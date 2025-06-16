@@ -1,0 +1,274 @@
+body {
+    width: 400px;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    padding: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.section {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+select, input, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #e0e0e0;
+    position: relative; 
+}
+
+.stock-info {
+    flex-grow: 1;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    width: auto;
+    margin: 0;
+    margin-left: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+    z-index: 10;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+    transform: translateY(-50%) translateX(0);
+}
+
+.stock-item:hover .delete-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+}
+
+.results-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.positive {
+    color: #4CAF50;
+}
+
+.negative {
+    color: #f44336;
+}
+
+#status {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+
+/* Live price styles */
+.stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #e0e0e0;
+}
+
+.stock-main-info {
+    flex-grow: 1;
+}
+
+.stock-symbol {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.stock-investment {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.stock-price-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stock-price-info {
+    text-align: right;
+    min-width: 80px;
+}
+
+.current-price {
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+}
+
+.price-change {
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.price-change.positive {
+    color: #4CAF50;
+}
+
+.price-change.negative {
+    color: #f44336;
+}
+
+.price-change.neutral {
+    color: #666;
+}
+
+.mini-chart {
+    width: 60px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.chart-loading {
+    width: 60px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #999;
+}
+
+.refresh-prices-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.refresh-prices-btn:hover {
+    background-color: #1976D2;
+}
+
+.refresh-prices-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.last-updated {
+    font-size: 10px;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
