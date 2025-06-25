@@ -43,7 +43,7 @@ A lightweight Chrome extension to help you **track your stock investments**, **v
 ### 💻 Backend Setup
 
 ```bash
-git clone https://github.com/your-username/stock-portfolio-extension.git
-cd stock-portfolio-extension/backend
-pip install -r requirements.txt (or) pip install flask flask_cors yfinance pandas
-python app.py
+git clone https://github.com/Shravan3504/portfolio_extension.git
+cd stock
+pip install flask flask_cors yfinance pandas
+python portfolio_api.py
